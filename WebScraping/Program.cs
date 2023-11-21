@@ -179,8 +179,8 @@ class Program
             for (int i = 1; i < Math.Min(MaxItemsToProcess, productItems.Count); i++)
             {
                 var productItem = productItems.ElementAt(i);
-                string hello = GetOrDefault(() => productItem.FindElement(By.CssSelector("header section span:last-child")).Text, "0,00");
-                string[] words = hello.Split(' ');
+                string price = GetOrDefault(() => productItem.FindElement(By.CssSelector("header section span:last-child")).Text, "0,00");
+                string[] splitPrice = price.Split(' ');
 
                 IWebElement linkElement = productItem.FindElement(By.XPath("./ancestor::a"));
 
@@ -189,7 +189,7 @@ class Program
                 ProductData productData = new ProductData
                 {
                     Name = GetOrDefault(() => productItem.FindElement(By.CssSelector("header .FtrEr_")).Text, "No production name found!"),
-                    Price = words[1],
+                    Price = splitPrice[1],
                     Link = hrefValue,
                 };
 
@@ -289,12 +289,15 @@ class Program
     static void PrintProductData(List<ProductData> productDataList)
     {
         double price = 0;
+        List<double> priceList = new List<double>();
         foreach (var productData in productDataList)
         {
-        price += Convert.ToDouble(productData.Price);
+            priceList.Add(Convert.ToDouble(productData.Price));
+            price += Convert.ToDouble(productData.Price);
             Console.WriteLine($"Name: {productData.Name}\nPrice: {productData.Price}\nLink: {productData.Link}\n");
         }
         Console.WriteLine($"Total price of these articles is: {Math.Round(price, 2)}");
+        Console.WriteLine($"Average price of these articles is: {Queryable.Average(priceList.AsQueryable())}");
 
     }
 }

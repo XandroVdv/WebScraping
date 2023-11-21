@@ -50,4 +50,25 @@
     "Uploader": "davephilipsen",
     "Views": "255 weergaven"
   }
+][
+  {
+    "Name": "Solid",
+    "Price": "42,95",
+    "Link": "https://www.zalando.be/solid-pankraz-trui-dune-so422q04h-b11.html"
+  },
+  {
+    "Name": "Oxmo",
+    "Price": "37,95",
+    "Link": "https://www.zalando.be/oxmo-trui-dune-1ox21i00i-b11.html"
+  },
+  {
+    "Name": "Stradivarius",
+    "Price": "25,99",
+    "Link": "https://www.zalando.be/stradivarius-sweater-dark-blue-sth21j09q-k11.html"
+  },
+  {
+    "Name": "Bershka",
+    "Price": "25,99",
+    "Link": "https://www.zalando.be/bershka-trui-grey-bej21i0ll-c11.html"
+  }
 ]
