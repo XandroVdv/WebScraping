@@ -14,6 +14,11 @@ ___
 - ICTJob: Title, Company, Location, Keywords, Link
 - Zalando: Name, Price, Link
 
+## Features
+___
+- Shows total price of scraped items from Zalando
+- Shows average price of scraped items from Zalando
+
 ## Usage
 ___
 1. Launch the application
