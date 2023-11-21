@@ -250,7 +250,7 @@ class Program
                 WriteIndented = true, // Makes the JSON output more readable
             });
 
-            File.WriteAllText("saved_data.json", jsonString);
+            File.AppendAllText("saved_data.json", jsonString);
 
         }
         catch 
