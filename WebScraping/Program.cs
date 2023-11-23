@@ -284,6 +284,7 @@ class Program
     }
     /// <summary>
     /// Method prints the list of articles scraped from zalando
+    /// Prints total value and average of scraped articles
     /// </summary>
     /// <param name="productDataList"></param>
     static void PrintProductData(List<ProductData> productDataList)
